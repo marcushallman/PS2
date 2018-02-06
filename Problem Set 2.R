@@ -81,16 +81,16 @@ leemis=function(x){
    Value<-c(CG,Leem)
    dat<-data.frame(Statistic,Value)
    print(dat)
-   print("* <- significant at the 10% level
-          ** <- significant at the 5% level
-         *** <- significant at the 1% level")
+   print("* <- Data is Bogus. significant at the 10% level
+          ** <- Data is Bogus. significant at the 5% level
+         *** <- Data is Bogus.significant at the 1% level")
    return(dat)
    }
 
  save<-function(x){
    
    sink(file="benfords.csv") #saves to this file
-   print.benfords(x) #rubs print.benfords
+   print.benfords(x) #runs print.benfords
    sink() #closes sink
  }
  save(vector) #Test
