@@ -23,8 +23,8 @@ leemis=function(x){
 }
 #This function calculates the Chogain d stat
  chogain= function(x){
-  fred<-countint(firstdig(x))
-  daphne=c(0)
+  fred<-countint(firstdig(x)) #I was watching Sccoby Doo while doing this. This variable holds all the first digit counts
+  daphne=c(0) #New variable which will be the vector that holds the chogain function for all first value counts
   for(i in 1:9){
    daphne=c(daphne,(fred[i]/length(x)-(log10(1+1/length(x)))))
   }
@@ -87,7 +87,11 @@ leemis=function(x){
    return(dat)
    }
 
- sink("benfords.csv")
- print.benfords(vector) 
-sink()
+ save<-function(x){
+   
+   sink(file="benfords.csv") #saves to this file
+   print.benfords(x) #rubs print.benfords
+   sink() #closes sink
+ }
+ save(vector) #Test
 
